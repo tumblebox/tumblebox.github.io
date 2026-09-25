@@ -1,4 +1,4 @@
-# app-ads.txt for Yalla Games
+# app-ads.txt for Tumblebox
 # Served at https://<our-domain>/app-ads.txt (must be the domain listed as "Website" in Play Console).
 #
 # TODO before launch: paste the full list from AppLovin MAX dashboard
