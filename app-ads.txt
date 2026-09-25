@@ -1,0 +1,7 @@
+# app-ads.txt for Yalla Games
+# Served at https://<our-domain>/app-ads.txt (must be the domain listed as "Website" in Play Console).
+#
+# TODO before launch: paste the full list from AppLovin MAX dashboard
+#   (Account > app-ads.txt), which covers AppLovin + every bidding partner (Google, Unity, ...).
+# Then add the AdMob line from AdMob > Apps > app-ads.txt:
+#   google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
