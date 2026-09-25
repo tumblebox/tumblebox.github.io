@@ -3,30 +3,200 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Yalla Games</title>
-  <meta name="description" content="Little games for your spare minutes. Easy to pick up, hard to put down, and they never get in your way.">
-  <link rel="stylesheet" href="style.css">
+  <title>Yalla Games: tiny games for tiny breaks</title>
+  <meta name="description" content="Little games you can pick up in seconds. No ads mid-level, rewarded videos only when you choose, and one small purchase to skip the rest.">
+  <meta name="theme-color" content="#FFD84D">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=Lilita+One&display=swap">
+  <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
+
+  <section class="hero">
+    <header class="site-header wrap">
+      <a class="wordmark" href="/"><span class="wordmark-dot" aria-hidden="true"></span>Yalla Games</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="#games">Games</a>
+        <a href="#support">Support</a>
+        <a class="nav-extra" href="/privacy.html">Privacy</a>
+      </nav>
+    </header>
+
+    <div class="hero-grid wrap">
+      <div class="hero-copy">
+        <h1>Tiny games for tiny breaks.</h1>
+        <p>Pick one up at the bus stop, put it down at your stop. You're playing in seconds, and no ad ever cuts into a round.</p>
+      </div>
+
+      <figure class="machine" aria-label="A capsule toy machine you can play with">
+        <div class="machine-glass">
+          <canvas id="toy" role="img" aria-label="Capsule toys piled inside a glass dome. Tap one to pop it."></canvas>
+        </div>
+        <div class="machine-base">
+          <span class="machine-count" id="toy-count" aria-live="polite">0 popped</span>
+          <button class="knob" id="toy-knob" type="button" aria-label="Turn the knob to shake the capsules"></button>
+        </div>
+        <figcaption class="machine-hint">Go on, tap a capsule. Or turn the knob.</figcaption>
+      </figure>
+    </div>
+  </section>
+
   <main>
-    <h1>Yalla Games</h1>
-    <p class="lede">Little games for your spare minutes. Easy to pick up, hard to put down.</p>
+    <section class="section">
+      <div class="promises-grid wrap">
+        <h2>Three things we promise.</h2>
+        <ul class="promise-list">
+          <li class="promise">
+            <span class="promise-mark is-circle" style="--mark: var(--gum)" aria-hidden="true"></span>
+            <div>
+              <h3>You're playing in seconds</h3>
+              <p>The first tap is a game tap. No sign-up, no account, no five-minute tutorial before the fun starts.</p>
+            </div>
+          </li>
+          <li class="promise">
+            <span class="promise-mark is-squircle" style="--mark: var(--mint)" aria-hidden="true"></span>
+            <div>
+              <h3>No ads in the middle of a level</h3>
+              <p>Want an extra life or double coins? Watch a short video, if you feel like it. It's always your call, never a surprise.</p>
+            </div>
+          </li>
+          <li class="promise">
+            <span class="promise-mark is-pill" style="--mark: var(--sun)" aria-hidden="true"></span>
+            <div>
+              <h3>Skip the in-between ads for good</h3>
+              <p>One small purchase turns off the ads between levels, forever. The bonus videos stay around in case you still want the reward.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-    <h2>Play first</h2>
-    <p>You're playing within seconds of opening one of our games. No long tutorials, no walls of pop-ups. Tap in and go.</p>
+    <section class="section games" id="games">
+      <div class="wrap">
+        <div class="games-head">
+          <h2>On their way to Google Play.</h2>
+          <p>Our first four games are in the workshop. Here's a peek.</p>
+        </div>
 
-    <h2>We won't interrupt you</h2>
-    <p>No ads pop up in the middle of a level. If you want an extra life or a bonus, you can watch a short video, but only if you choose to. And if you'd rather skip the ads between levels, one small purchase switches them off for good.</p>
+        <div class="game-grid">
+          <article class="game-tile" style="--tile-bg: #FFE1EC">
+            <div class="game-art" aria-hidden="true">
+              <svg viewBox="0 0 400 220">
+                <path d="M200 0v58" stroke="#1D1A3A" stroke-width="6"/>
+                <rect x="176" y="54" width="48" height="22" rx="8" fill="#5B3FD9" stroke="#1D1A3A" stroke-width="5"/>
+                <path d="M184 76l-18 34 10 12M216 76l18 34-10 12" fill="none" stroke="#1D1A3A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                <g stroke="#1D1A3A" stroke-width="5">
+                  <circle cx="120" cy="178" r="34" fill="#2FCB8A"/><path d="M86 178h68"/>
+                  <circle cx="190" cy="186" r="30" fill="#FFB020"/><path d="M160 186h60"/>
+                  <circle cx="262" cy="176" r="36" fill="#3BA7FF"/><path d="M226 176h72"/>
+                  <circle cx="226" cy="132" r="28" fill="#FF5C93"/><path d="M198 132h56"/>
+                  <circle cx="320" cy="190" r="26" fill="#5B3FD9"/><path d="M294 190h52"/>
+                </g>
+              </svg>
+            </div>
+            <div class="game-body">
+              <h3>Pocket Grabber</h3>
+              <p>A claw machine where the prizes tumble, stack and topple. Grab three at once for a combo.</p>
+              <span class="game-status">Coming soon</span>
+            </div>
+          </article>
 
-    <h2>Coming soon</h2>
-    <p>Our first games are almost ready for Google Play. Claw machines, neon snakes, a very cozy bakery, and some sneaky cats.</p>
+          <article class="game-tile" style="--tile-bg: #221D4A">
+            <div class="game-art" aria-hidden="true">
+              <svg viewBox="0 0 400 220">
+                <g fill="#2FCB8A" opacity=".22">
+                  <rect x="60" y="40" width="40" height="40"/><rect x="100" y="40" width="40" height="40"/><rect x="140" y="40" width="40" height="40"/>
+                  <rect x="140" y="80" width="40" height="40"/><rect x="140" y="120" width="40" height="40"/><rect x="180" y="120" width="40" height="40"/>
+                </g>
+                <g fill="#FFFFFF" opacity=".18">
+                  <circle cx="60" cy="40" r="3"/><circle cx="100" cy="40" r="3"/><circle cx="140" cy="40" r="3"/><circle cx="180" cy="40" r="3"/><circle cx="220" cy="40" r="3"/><circle cx="260" cy="40" r="3"/><circle cx="300" cy="40" r="3"/><circle cx="340" cy="40" r="3"/>
+                  <circle cx="60" cy="120" r="3"/><circle cx="100" cy="120" r="3"/><circle cx="220" cy="120" r="3"/><circle cx="260" cy="120" r="3"/><circle cx="300" cy="120" r="3"/><circle cx="340" cy="120" r="3"/>
+                  <circle cx="60" cy="200" r="3"/><circle cx="100" cy="200" r="3"/><circle cx="140" cy="200" r="3"/><circle cx="180" cy="200" r="3"/><circle cx="220" cy="200" r="3"/><circle cx="260" cy="200" r="3"/><circle cx="300" cy="200" r="3"/><circle cx="340" cy="200" r="3"/>
+                </g>
+                <path d="M80 60h80v80h40c30 0 40-40 80-40s50 50 90 50" fill="none" stroke="#2FCB8A" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="370" cy="150" r="14" fill="#2FCB8A"/>
+                <circle cx="374" cy="146" r="3.5" fill="#1D1A3A"/>
+                <circle cx="300" cy="70" r="9" fill="#FF5C93"/>
+              </svg>
+            </div>
+            <div class="game-body">
+              <h3>Glow Serpent</h3>
+              <p>Snake, but you paint the board as you slither. Fill the glowing shape to clear the level.</p>
+              <span class="game-status">Coming soon</span>
+            </div>
+          </article>
 
-    <h2>Say hello</h2>
-    <p>Found a bug, got an idea, or need help with a purchase? Write to us at <a href="mailto:dev.puneetmehta@gmail.com">dev.puneetmehta@gmail.com</a>. A real person reads every message.</p>
+          <article class="game-tile" style="--tile-bg: #FFF0CF">
+            <div class="game-art" aria-hidden="true">
+              <svg viewBox="0 0 400 220">
+                <g stroke="#1D1A3A" stroke-width="4">
+                  <rect x="48" y="30" width="92" height="36" rx="14" fill="#E9A15B"/><path d="M52 44c12 10 20-6 32 4s20-6 32 4 18-4 20 0" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round"/>
+                  <rect x="154" y="30" width="92" height="36" rx="14" fill="#FF8FB5"/>
+                  <rect x="260" y="30" width="92" height="36" rx="14" fill="#E9A15B"/><path d="M264 44c12 10 20-6 32 4s20-6 32 4 18-4 20 0" fill="none" stroke="#5B3FD9" stroke-width="7" stroke-linecap="round"/>
+                  <rect x="100" y="78" width="92" height="36" rx="14" fill="#FFD84D"/>
+                  <rect x="206" y="78" width="92" height="36" rx="14" fill="#C7F0DD"/>
+                  <circle cx="232" cy="150" r="12" fill="#FFFFFF"/>
+                  <rect x="150" y="186" width="110" height="18" rx="9" fill="#5B3FD9"/>
+                </g>
+              </svg>
+            </div>
+            <div class="game-body">
+              <h3>Rebound Bakery</h3>
+              <p>Break bricks made of pastries. Every topping changes how the ball bounces, and some are sticky.</p>
+              <span class="game-status">Coming soon</span>
+            </div>
+          </article>
 
-    <footer>
-      Yalla Games is made by dev.Puneet · <a href="privacy.html">Privacy Policy</a>
-    </footer>
+          <article class="game-tile" style="--tile-bg: #E4DEFF">
+            <div class="game-art" aria-hidden="true">
+              <svg viewBox="0 0 400 220">
+                <path d="M300 20L200 220h200V20z" fill="#FFF3B0" opacity=".9"/>
+                <g stroke="#1D1A3A" stroke-width="5" stroke-linejoin="round">
+                  <path d="M92 190c0-40 22-66 58-66s58 26 58 66z" fill="#1D1A3A"/>
+                  <path d="M100 136l-4-40 34 24zM200 136l4-40-34 24z" fill="#1D1A3A"/>
+                  <circle cx="150" cy="140" r="44" fill="#1D1A3A"/>
+                </g>
+                <circle cx="134" cy="138" r="7" fill="#FFD84D"/><circle cx="166" cy="138" r="7" fill="#FFD84D"/>
+                <path d="M238 176c16-18 44-18 60 0-16 18-44 18-60 0zM298 176l18-12v24z" fill="#FF5C93" stroke="#1D1A3A" stroke-width="4" stroke-linejoin="round"/>
+                <circle cx="254" cy="173" r="3" fill="#1D1A3A"/>
+              </svg>
+            </div>
+            <div class="game-body">
+              <h3>Tiptoe Thief</h3>
+              <p>Sneak past the guards and steal the fish. The guards only move when you do, so every step counts.</p>
+              <span class="game-status">Coming soon</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="support">
+      <div class="wrap">
+        <div class="support-card">
+          <div>
+            <h2>Stuck? Found a bug?</h2>
+            <p>Or a purchase didn't show up? Send us a note and a real person will get back to you.</p>
+            <p class="address">dev.puneetmehta@gmail.com</p>
+          </div>
+          <a class="button" href="mailto:dev.puneetmehta@gmail.com?subject=Yalla%20Games%20support">Email us</a>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>Yalla Games is made by dev.Puneet.</span>
+      <nav aria-label="Footer">
+        <a href="/privacy.html">Privacy policy</a>
+        <a href="mailto:dev.puneetmehta@gmail.com">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="/assets/toybox.js" defer></script>
 </body>
 </html>
