@@ -1,7 +1,2 @@
-# app-ads.txt for Tumblebox
-# Served at https://<our-domain>/app-ads.txt (must be the domain listed as "Website" in Play Console).
-#
-# TODO before launch: paste the full list from AppLovin MAX dashboard
-#   (Account > app-ads.txt), which covers AppLovin + every bidding partner (Google, Unity, ...).
-# Then add the AdMob line from AdMob > Apps > app-ads.txt:
-#   google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+# app-ads.txt for Tumblebox (https://tumblebox.github.io). Authorized sellers of our ad inventory.
+google.com, pub-9452293546706112, DIRECT, f08c47fec0942fa0
