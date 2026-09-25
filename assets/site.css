@@ -249,7 +249,7 @@ p + p { margin-top: 0.9em; }
 
 .game-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 28px;
 }
 
@@ -395,13 +395,12 @@ p + p { margin-top: 0.9em; }
   .hero-grid, .promises-grid, .game-hero-grid { grid-template-columns: 1fr; }
   .machine { justify-self: start; max-width: 340px; }
   .promises-grid > h2 { position: static; }
-  .feature-list { grid-template-columns: 1fr; }
+  .feature-list, .game-grid { grid-template-columns: 1fr; }
   .support-card { grid-template-columns: 1fr; padding: 32px 26px; }
 }
 
 @media (max-width: 640px) {
   .section { padding: 72px 0; }
-  .game-grid { grid-template-columns: 1fr; }
   .site-nav { gap: 16px; font-size: 1rem; }
   .site-nav .nav-extra { display: none; }
   .wordmark { font-size: 1.55rem; }
