@@ -266,6 +266,15 @@ p + p { margin-top: 0.9em; }
 .game-art svg { width: 100%; height: auto; }
 .game-body { padding: 22px 24px 26px; display: grid; gap: 10px; }
 .game-body p { color: var(--muted); }
+.game-cta {
+  justify-self: start;
+  margin-top: 6px;
+  padding: 10px 18px;
+  font-size: .95rem;
+}
+
+.hero-cta { margin-top: 22px; }
+
 .game-status {
   justify-self: start;
   margin-top: 6px;
