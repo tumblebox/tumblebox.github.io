@@ -249,11 +249,12 @@ p + p { margin-top: 0.9em; }
 
 .game-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 28px;
 }
 
 .game-tile {
+  grid-column: span 2;
   display: flex;
   flex-direction: column;
   border: var(--stroke) solid var(--outline);
@@ -262,6 +263,8 @@ p + p { margin-top: 0.9em; }
   box-shadow: var(--pop);
   overflow: hidden;
 }
+/* Five tiles: three on top, two centred below */
+.game-tile:nth-child(4):nth-last-child(2) { grid-column: 2 / span 2; }
 .game-art { background: var(--tile-bg); border-bottom: var(--stroke) solid var(--outline); }
 .game-art svg, .game-art img { display: block; width: 100%; height: auto; }
 .game-body { padding: 22px 24px 26px; display: grid; gap: 10px; }
@@ -405,6 +408,7 @@ p + p { margin-top: 0.9em; }
   .machine { justify-self: start; max-width: 340px; }
   .promises-grid > h2 { position: static; }
   .feature-list, .game-grid { grid-template-columns: 1fr; }
+  .game-grid .game-tile:nth-child(n) { grid-column: auto; }
   .support-card { grid-template-columns: 1fr; padding: 32px 26px; }
 }
 
