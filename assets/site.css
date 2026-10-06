@@ -249,7 +249,7 @@ p + p { margin-top: 0.9em; }
 
 .game-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 28px;
 }
 
@@ -263,7 +263,7 @@ p + p { margin-top: 0.9em; }
   overflow: hidden;
 }
 .game-art { background: var(--tile-bg); border-bottom: var(--stroke) solid var(--outline); }
-.game-art svg { width: 100%; height: auto; }
+.game-art svg, .game-art img { display: block; width: 100%; height: auto; }
 .game-body { padding: 22px 24px 26px; display: grid; gap: 10px; }
 .game-body p { color: var(--muted); }
 .game-cta {
