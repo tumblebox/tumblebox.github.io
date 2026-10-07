@@ -263,8 +263,9 @@ p + p { margin-top: 0.9em; }
   box-shadow: var(--pop);
   overflow: hidden;
 }
-/* Five tiles: three on top, two centred below */
+/* A short last row is centred: two tiles (five in all), or one tile (seven in all) */
 .game-tile:nth-child(4):nth-last-child(2) { grid-column: 2 / span 2; }
+.game-tile:last-child:nth-child(3n+1) { grid-column: 3 / span 2; }
 .game-art { background: var(--tile-bg); border-bottom: var(--stroke) solid var(--outline); }
 .game-art svg, .game-art img { display: block; width: 100%; height: auto; }
 .game-body { padding: 22px 24px 26px; display: grid; gap: 10px; }
